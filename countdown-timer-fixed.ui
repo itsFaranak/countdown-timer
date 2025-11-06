@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Countdown_Timer</class>
+ <widget class="QMainWindow" name="Countdown_Timer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>343</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Countdown Timer</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow {
+                background-color: #1E1E2E; /* رنگ ثابت مشابه self.color_default */
+            }
+            QLabel#timeDisplay {
+                color: #F8F8F2;
+                font-size: 48px;
+                font-weight: bold;
+                qproperty-alignment: AlignCenter;
+            }
+            QPushButton {
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 10px;
+                padding: 8px 16px;
+            }
+            QPushButton#startButton {
+                background-color: #4CAF50;
+                color: white;
+            }
+            QPushButton#startButton:hover {
+                background-color: #45A049;
+            }
+            QPushButton#stopButton {
+                background-color: rgb(244, 163, 0);
+                color: white;
+            }
+            QPushButton#stopButton:hover {
+                background-color: rgb(221, 147, 0);
+            }
+            QPushButton#resetButton {
+                background-color: #F44336;
+                color: white;
+            }
+            QPushButton#resetButton:hover {
+                background-color: #E53935;
+            }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="Titlelabel">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>10</y>
+      <width>311</width>
+      <height>33</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>20</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#Titlelabel {
+    color: #BD93F9;
+    font-size: 28px;
+    font-weight: bold;
+}</string>
+    </property>
+    <property name="text">
+     <string>Countdown Timer</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QTimeEdit" name="timeEdit">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>70</y>
+      <width>250</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>18</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QTimeEdit {
+    border: 1px solid #AAB6FE;
+    border-radius: 6px;
+    background-color: #FFFFFF;
+    padding: 4px;
+    font-size: 24px;
+}</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+    <property name="displayFormat">
+     <string>HH:mm:ss</string>
+    </property>
+    <property name="time">
+     <time>
+      <hour>0</hour>
+      <minute>5</minute>
+      <second>0</second>
+     </time>
+    </property>
+   </widget>
+   <widget class="QLabel" name="timeDisplay">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>120</y>
+      <width>300</width>
+      <height>80</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>24</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel#timeDisplay {
+    color: #F8F8F2;
+    font-size: 48px;
+    font-weight: bold;
+    qproperty-alignment: AlignCenter;
+}</string>
+    </property>
+    <property name="text">
+     <string>00:00</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="startButton">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>220</y>
+      <width>150</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#startButton {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+QPushButton#startButton:hover {
+    background-color: #45A049;
+}</string>
+    </property>
+    <property name="text">
+     <string>Start</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="stopButton">
+    <property name="geometry">
+     <rect>
+      <x>40</x>
+      <y>220</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#stopButton {
+    background-color: rgb(244, 163, 0);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+QPushButton#stopButton:hover {
+    background-color: rgb(221, 147, 0);
+}</string>
+    </property>
+    <property name="text">
+     <string>Stop</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="resetButton">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>220</y>
+      <width>120</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Segoe UI</family>
+      <pointsize>14</pointsize>
+      <weight>75</weight>
+      <bold>true</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton#resetButton {
+    background-color: #F44336;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px;
+}
+QPushButton#resetButton:hover {
+    background-color: #E53935;
+}</string>
+    </property>
+    <property name="text">
+     <string>Reset</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
